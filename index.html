@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bigotitos -  Tienda de comida para animales</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <header class="topbar">
+    <h1>Bigotitos</h1>
+    <nav>
+      <button id="btnSaludo" class="btn">Saludar</button>
+      <button id="btnVaciar" class="btn btn-secondary">Vaciar carrito</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2>Comida sana para tus animales</h2>
+      <p>Piensos, snacks y latas con ingredientes de calidad.</p>
+      <p class="note">Si la pruebas, no querrás más comida para humanos</p>
+    </section>
+
+    <section class="card">
+      <h3>Productos</h3>
+      <div id="gridProductos" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <h3>Carrito</h3>
+      <ul id="listaCarrito" class="list">  
+      </ul>
+      <div class="cart-summary">
+        <span id="txtUnidades">0 ud</span>
+        <strong id="txtTotal">0.00 €</strong>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small> Bigotitos · Comida sobrosa</small>
+  </footer>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
