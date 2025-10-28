@@ -44,6 +44,22 @@ botones.forEach(btn => {
     })
 });
 
+// BOTONES AÑADIR AL CARRITO (USANDO EVENT DELEGATION)
+// La delegación de eventos (event delegation) en JavaScript
+// es una técnica que permite manejar eventos de múltiples elementos hijos
+// adjuntando un único detector de eventos a un elemento padre común
+// Event bubbling - Propagacion de eventos
+// event.target.closest('[data-id]') 
+
+const grid = document.querySelector("#gridProductos");
+grid.addEventListener("click", (event) => { 
+    // event se refiere al propio evento de click que estoy escuchando
+    const boton = event.target.closest(".button[data-id]");
+    if (!boton) return;
+    const idProducto = boton.getAttribute("data-id");
+    agregar(Number(idProducto));
+});
+
 // BUSCAR PRODUCTO POR ID (retorna un objeto producto o undefined si no encuentra)
 
 // Lo hago en función flecha en este ejercicio, pero lo suyo es hacerlo con función clasica
